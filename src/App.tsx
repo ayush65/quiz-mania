@@ -1,13 +1,13 @@
 /** @format */
 
 import "./App.css";
-import Homepage from "./Pages/Homepage/Homepage";
 import "./Colors/Colors.css";
+import AllRoutes from "./AllRoutes/AllRoutes";
 
 function App() {
   return (
     <div className='App'>
-      <Homepage />
+      <AllRoutes />
     </div>
   );
 }

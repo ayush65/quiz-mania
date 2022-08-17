@@ -1,9 +1,13 @@
 /** @format */
 
 import React from "react";
+import { Link } from "react-router-dom";
+import { useQuiz } from "../../../Context/quiz-context";
 import "./HomepageCard.css";
 
 const Homepagecard = () => {
+  const { stateDispatch } = useQuiz();
+
   return (
     <div>
       <div className='homepage-card-container'>
@@ -13,7 +17,15 @@ const Homepagecard = () => {
             alt=''
             className='img-container'
           />
-          <button className='quiz-button'>Play Now</button>
+          <Link
+            to='/instructions'
+            onClick={() => {
+              stateDispatch({ type: "obj1", payload: 0 });
+              stateDispatch({ type: "INCREMENT", payload: 0 });
+            }}
+            className='quiz-button'>
+            Play Now
+          </Link>
         </div>
 
         <div className='navbar-div-first'>
@@ -22,7 +34,15 @@ const Homepagecard = () => {
             alt=''
             className='img-container'
           />
-          <button className='quiz-button'>Play Now</button>
+          <Link
+            to='/instructions'
+            onClick={() => {
+              stateDispatch({ type: "obj2", payload: 0 });
+              stateDispatch({ type: "INCREMENT", payload: 0 });
+            }}
+            className='quiz-button'>
+            Play Now
+          </Link>
         </div>
       </div>
     </div>
