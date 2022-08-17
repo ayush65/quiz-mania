@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { Link } from "react-router-dom";
+import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import "./Quizinstruction.css";
 
@@ -48,6 +49,7 @@ export default function App(props: IAppProps) {
           </Link>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

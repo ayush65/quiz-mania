@@ -6,6 +6,7 @@ import Navbar from "../Navbar/Navbar";
 import { friends, Suits } from "../../backend/quizes";
 import { useQuiz } from "../../Context/quiz-context";
 import "./Quiz.css";
+import Footer from "../Footer/Footer";
 
 export interface IAppProps {}
 
@@ -172,6 +173,7 @@ export const Quizlisting: React.FC = (props: IAppProps) => {
               </div>
             );
           })}
+      <Footer />
     </div>
   );
 };
